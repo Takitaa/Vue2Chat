@@ -5,6 +5,12 @@
 		<div id="button-toggle">
 			<VueToggles checked-text="On" unchecked-text="Off" :value="isToggled" @click="isToggled = !isToggled" />
 		</div>
+
+		<slide-out dock="right" :visible.sync="visible" title="The title">
+			<p>The content</p>
+		</slide-out>
+
+		<button @click="visible = true">Show</button>
 	</div>
 </template>
 
@@ -14,7 +20,20 @@ export default {
 		return {
 			message: 'Hello Taisa',
 			isToggled: false,
+			visible: false,
 		};
+	},
+
+	methods: {
+		onClosing(e) {
+			// prevent close and wait
+			e.pause = true;
+			// close after 3 seconds
+			setTimeout(() => {
+				// assign true to close, do nothing or assign false to cancel close.
+				e.resume = true;
+			}, 3000);
+		},
 	},
 };
 </script>

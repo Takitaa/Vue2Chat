@@ -13,10 +13,6 @@
 
 			<button @click="visible = true">Show</button>
 		</div>
-
-		<div>
-			<button v-on:click="warn('Form cannot be submitted yet.', $event)">Submit</button>
-		</div>
 	</div>
 </template>
 
@@ -33,9 +29,9 @@ export default {
 	methods: {
 		toggleChat: function (event) {
 			this.isToggled = !this.isToggled;
-			if (event) {
-				this.visible = true;
-			}
+
+			this.visible = true;
+
 			//alert(message);
 		},
 		// onClosing(e) {

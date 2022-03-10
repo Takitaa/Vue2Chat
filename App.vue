@@ -3,14 +3,21 @@
 		{{ message }}
 
 		<div id="button-toggle">
-			<VueToggles checked-text="On" unchecked-text="Off" :value="isToggled" @click="isToggled = !isToggled" />
+			<VueToggles
+				checked-text="Chat On"
+				unchecked-text=" Chat Off"
+				:value="isToggled"
+				@click="visible = !visible"
+			/>
 		</div>
 
-		<slide-out dock="right" :visible.sync="visible" title="The title">
-			<p>The content</p>
-		</slide-out>
+		<div id="side-panel">
+			<slide-out dock="right" :visible.sync="visible" title="The title">
+				<p>The content</p>
+			</slide-out>
 
-		<button @click="visible = true">Show</button>
+			<button @click="visible = true">Show</button>
+		</div>
 	</div>
 </template>
 

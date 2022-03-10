@@ -13,8 +13,22 @@
 		</div>
 
 		<div id="side-panel">
-
+ <!--
    <bubble-chat
+     :position="chatPosition"
+     :messages="messagesList"
+     :text-field="'message'"
+     :sender-name-field="'username'"
+     :avatar-link-field="'iconUrl'"
+   >
+   </bubble-chat> OUTSIDE PANEL -->
+
+
+
+				<slide-out dock="right" :visible.sync="visible">
+					<div id = "chat-container">
+					<!--<p>The content</p>-->
+					<bubble-chat
      :position="chatPosition"
      :messages="messagesList"
      :text-field="'message'"
@@ -23,19 +37,6 @@
    >
    </bubble-chat>
 
-
-
-				<slide-out dock="right" :visible.sync="visible">
-					<div id = "chat-container">
-					<p>The content</p>
-					<!-- <bubble-chat
-    				 :position="chatPosition"
-     :messages="messagesList"
-     :text-field="'message'"
-     :sender-name-field="'username'"
-     :avatar-link-field="'iconUrl'"
-	 >
-	 </bublechat> -->
 
 						<!-- <div id ="footer">
 						<input type="text" v-model = "value">

@@ -48,12 +48,19 @@
 
 				<!--<button @click="visible = true">Show</button>-->
 			</div>
+			<ToggleButton></ToggleButton>
 		</div>
 	</div>
 </template>
 
 <script>
+import ToggleButton from "./components/ToggleButton.vue"
+
 export default {
+	name: "App",
+	components: {
+		ToggleButton,
+	},
 	data() {
 		return {
 			buttonToggled: false,

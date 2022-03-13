@@ -5,8 +5,8 @@
         height="30"
         width="90"
         margin="100"
-        checked-text="Chat Off"
-        unchecked-text=" Chat On"
+        checked-text="Chat On"
+        unchecked-text=" Chat Off"
         :value="buttonToggled"
         @click="toggleOn"
       >

@@ -2,7 +2,9 @@
   <div id="app">
     <!-- <ToggleButton :buttonToggled="buttonToggled"></ToggleButton>-->
     <ToggleButton></ToggleButton>
-    <SlidePanel :visible="visible"></SlidePanel>
+
+    <!-- <SlidePanel @status-toggle="handleStatusToggle"></SlidePanel>-->
+    <SlidePanel></SlidePanel>
   </div>
 </template>
 
@@ -32,7 +34,11 @@ export default {
     };
   },
 
-  methods: {},
+  methods: {
+    // handleStatusToggle: function (statusToggle) {
+    //   console.log(statusToggle);
+    // },
+  },
 };
 </script>
 

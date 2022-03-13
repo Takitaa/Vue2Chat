@@ -11,11 +11,6 @@
           :avatar-link-field="'iconUrl'"
         >
         </bubble-chat>
-
-        <!-- <div id ="footer">
-							<input type="text" v-model = "value">
-							<button @click = "messageList.push(value)">Submit</button>
-						</div> -->
       </div>
     </slide-out>
   </div>
@@ -24,10 +19,6 @@
 <script>
 export default {
   name: "SlidePanel",
-  //   props: {
-  //     visible: Boolean,
-  //     messagesList: [],
-  //   },
 
   data() {
     return {

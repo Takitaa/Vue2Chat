@@ -1,41 +1,19 @@
 <template>
 	<div id="app">
-		<div class="button" id="button-toggle">
-			<VueToggles
-				height="30"
-				width="90"
-				margin="100"
-				checked-text="Chat Off"
-				unchecked-text=" Chat On"
-				:value="buttonToggled"
-				@click="toggleOn"
-			/>
-		</div>
+
 
 		<div id="side-panel">
- <!--
-   <bubble-chat
-     :position="chatPosition"
-     :messages="messagesList"
-     :text-field="'message'"
-     :sender-name-field="'username'"
-     :avatar-link-field="'iconUrl'"
-   >
-   </bubble-chat> OUTSIDE PANEL -->
-
-
-
 				<slide-out dock="right" :visible.sync="visible">
 					<div id = "chat-container">
 					<!--<p>The content</p>-->
 					<bubble-chat
-     :position="chatPosition"
-     :messages="messagesList"
-     :text-field="'message'"
-     :sender-name-field="'username'"
-     :avatar-link-field="'iconUrl'"
-   >
-   </bubble-chat>
+             :position="chatPosition"
+             :messages="messagesList"
+             :text-field="'message'"
+             :sender-name-field="'username'"
+             :avatar-link-field="'iconUrl'"
+             >
+          </bubble-chat>
 
 
 						<!-- <div id ="footer">

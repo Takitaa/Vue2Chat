@@ -1,12 +1,34 @@
 <template>
-<ul>Display screen</ul>
-
+	<div>
+		<div class="button" id="button-toggle">
+			<VueToggles
+				height="30"
+				width="90"
+				margin="100"
+				checked-text="Chat Off"
+				unchecked-text=" Chat On"
+				:value="buttonToggled"
+				@click="toggleOn"
+			/>
+		</div>
+		<VueToggles
+	</div>
 </template>
 
 <script>
-export default{
-name: "ToggleButton",
+export default {
+	name: 'ToggleButton',
 
+	methods: {
+		toggleOn: function (event) {
+			this.buttonToggled = !this.buttonToggled;
+			if ((this.buttonToggle = true)) {
+				this.visible = true;
+			} else {
+				this.visible = false;
+			}
+		},
+	},
 };
 </script>
 

@@ -2,6 +2,13 @@
 	<div id="app">
 
 
+			<ToggleButton :buttonToggled="toggle">
+
+			</ToggleButton>
+		</div>
+
+
+
 		<div id="side-panel">
 				<slide-out dock="right" :visible.sync="visible">
 					<div id = "chat-container">
@@ -26,7 +33,7 @@
 
 				<!--<button @click="visible = true">Show</button>-->
 			</div>
-			<ToggleButton></ToggleButton>
+
 		</div>
 	</div>
 </template>
@@ -39,22 +46,20 @@ export default {
 	components: {
 		ToggleButton,
 	},
+
 	data() {
 		return {
-			buttonToggled: false,
+			//buttonToggled: false,
 			visible: false,
 			value: undefined,
-			//messageList: []
-			//chatPosition: 'right',
-     messagesList: [
-      {
-          username: 'John Doe',
-          message: 'Hey guys! How are you?',
-          iconUrl: 'https://www.link-to-john-doe-pic.jpg'
-      }
-     ]
-    }
-
+            messagesList: [
+				{
+        		  username: 'John Doe',
+         		  message: 'Hey guys! How are you?',
+        		  iconUrl: 'https://www.link-to-john-doe-pic.jpg'
+			    }
+            ]
+       }
 	},
 
 	methods: {
@@ -65,22 +70,8 @@ export default {
 			} else {
 				this.visible = false
 			}
-	}
-	//statusPanel = this.visible = !this.visible;
-
-			//return statusPanel
-
-			// if ('this.visible = true') {
-			// 	toggleChat();
-			// }
-		},
-
-		// toggleChat: function () {
-		// 	this.isToggled = !this.isToggled;
-		// 	this.isToggled = false;
-		// 	this.visible = false;
-		// },
-
+	    }
+	},
 };
 </script>
 

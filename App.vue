@@ -5,7 +5,7 @@
 			<ToggleButton :buttonToggled="toggle">
 
 			</ToggleButton>
-		</div>
+
 
 
 

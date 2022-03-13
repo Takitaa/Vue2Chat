@@ -18,9 +18,9 @@
 
 export default {
   name: "ToggleButton",
-  props: {
-    buttonToggled: Boolean,
-  },
+  // props: {
+  //   buttonToggled: Boolean,
+  // },
 
   // computed: {
   // toggleOn: function (event) {
@@ -35,11 +35,11 @@ export default {
   //   },
   // },
 
-  // data() {
-  // 	return {
-  // 		buttonToggled: false,
-  // 	};
-  // }, //end Data
+  data() {
+    return {
+      buttonToggled: false,
+    };
+  }, //end Data
 
   methods: {
     toggleOn: function (event) {

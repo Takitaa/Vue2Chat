@@ -1,6 +1,7 @@
 <template>
   <div id="app">
-    <ToggleButton :buttonToggled="buttonToggled"></ToggleButton>
+    <!-- <ToggleButton :buttonToggled="buttonToggled"></ToggleButton>-->
+    <ToggleButton></ToggleButton>
     <SlidePanel :visible="visible"></SlidePanel>
   </div>
 </template>
@@ -18,16 +19,16 @@ export default {
 
   data() {
     return {
-      buttonToggled: false,
-      visible: false,
-      value: undefined,
-      messagesList: [
-        {
-          username: "John Doe",
-          message: "Hey guys! How are you?",
-          iconUrl: "https://www.link-to-john-doe-pic.jpg",
-        },
-      ],
+      // buttonToggled: false,
+      // visible: false,
+      // value: undefined,
+      // messagesList: [
+      //   {
+      //     username: "John Doe",
+      //     message: "Hey guys! How are you?",
+      //     iconUrl: "https://www.link-to-john-doe-pic.jpg",
+      //   },
+      // ],
     };
   },
 

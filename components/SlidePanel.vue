@@ -24,10 +24,24 @@
 <script>
 export default {
   name: "SlidePanel",
-  props: {
-    visible: Boolean,
-    messagesList: [],
-  },
+  //   props: {
+  //     visible: Boolean,
+  //     messagesList: [],
+  //   },
+
+  data() {
+    return {
+      visible: false,
+      value: undefined,
+      messagesList: [
+        {
+          username: "John Doe",
+          message: "Hey guys! How are you?",
+          iconUrl: "https://www.link-to-john-doe-pic.jpg",
+        },
+      ],
+    };
+  }, //end Data
 };
 </script>
 

@@ -1,7 +1,7 @@
 <template>
   <div id="app">
-    <ToggleButton :buttonToggled="toggle"></ToggleButton>
-    <SlidePanel></SlidePanel>
+    <ToggleButton :buttonToggled="buttonToggled"></ToggleButton>
+    <SlidePanel :visible="visible"></SlidePanel>
   </div>
 </template>
 

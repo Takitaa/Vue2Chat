@@ -8,29 +8,32 @@
       unchecked-text=" Chat On"
       :value="buttonToggled"
       @click="toggleOn"
-    />
-    <VueToggles
+    >
+    </VueToggles>
   </div>
 </template>
 
 <script>
+//import SlidePanel from "./components/SlidePanel.vue";
+
 export default {
   name: "ToggleButton",
-  props: "toggle",
-
-  computed: {
-    toggleOn: function (event) {
-      const toggleSituation = event.target.value;
-
-      this.buttonToggled = !this.buttonToggled;
-      if ((this.buttonToggle = true)) {
-        this.visible = true;
-      } else {
-        this.visible = false;
-      }
-      this.$emit("checking-toggle", toggleSituation);
-    },
+  props: {
+    buttonToggled: Boolean,
   },
+
+  // computed: {
+  // toggleOn: function (event) {
+  //   this.buttonToggled = !this.buttonToggled;
+  //   if ((this.buttonToggle = true)) {
+  //     this.visible = true;
+  //   } else {
+  //     this.visible = false;
+  //   }
+  //const toggleSituation = event.target.value;
+  // this.$emit("checking-toggle", toggleSituation);
+  //   },
+  // },
 
   // data() {
   // 	return {
@@ -38,7 +41,17 @@ export default {
   // 	};
   // }, //end Data
 
-  methods: {}, //end Methods
+  methods: {
+    toggleOn: function (event) {
+      this.buttonToggled = !this.buttonToggled;
+
+      if ((this.buttonToggle = true)) {
+        this.visible = true;
+      } else {
+        this.visible = false;
+      }
+    },
+  }, //end Methods
 }; //end Default
 </script>
 
